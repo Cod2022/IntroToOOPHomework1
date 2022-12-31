@@ -18,12 +18,12 @@ public class Locker extends Man {
                 if (key == 1) {
                     this.state = State.Closed;
                     System.out.printf("%s закрыл шкафчик", name);
-                    // break;
+                    break;
                 }
                 if (key == 2) {
                     this.state = State.Opened;
                     System.out.printf("%s открыл шкафчик", name);
-                    // break;
+                    break;
                 }
                 if (key == 3) {
                     System.out.printf("Вы вышли из программы.Всего доброго!");
