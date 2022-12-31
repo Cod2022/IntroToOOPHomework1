@@ -3,10 +3,9 @@ package Task2;
 public class Locker extends Man {
 
     enum State {
-        Closed, Opened
+        Closed, Opened, Out
     }
 
-    boolean opened;
     State state;
     
     public Locker() { 
@@ -14,21 +13,22 @@ public class Locker extends Man {
     }
 
     public void openCloseLocker () {
-            int key = chooseState();
+        int key = chooseState();
+        while (this.state != State.Out) {
                 if (key == 1) {
                     this.state = State.Closed;
                     System.out.printf("%s закрыл шкафчик", name);
-                    if (this.state == State.Closed) {
-                        openCloseLocker();
-                    }
-                    
+                    // break;
                 }
                 if (key == 2) {
                     this.state = State.Opened;
                     System.out.printf("%s открыл шкафчик", name);
+                    // break;
                 }
                 if (key == 3) {
                     System.out.printf("Вы вышли из программы.Всего доброго!");
+                    this.state = State.Out;
                 }
+        }      
     }
 }
