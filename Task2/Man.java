@@ -3,14 +3,14 @@ package Task2;
 import java.util.Scanner;
 
 public class Man {
-    String name;
+    public static String name;
 
     public Man() {
 
     }
 
     public Man (String name) {
-        this.name = name;
+        Man.name = name;
     }
 
     public int chooseState () {
